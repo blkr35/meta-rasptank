@@ -1,0 +1,78 @@
+This README file contains information on the contents of the meta-adeept layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: git://git.yoctoproject.org/poky.git
+  branch: dunfell
+
+  URI: git://git.yoctoproject.org/meta-raspberrypi.git
+  branch: dunfell
+
+  URI: git://git.openembedded.org/meta-openembedded
+  branch: dunfell
+
+  URI: https://github.com/96boards/meta-96boards.git
+  branch: dunfell
+
+Table of Contents
+=================
+
+  I. Install dependencies 
+ II. Adding the meta-adeept layer to your build
+III. Build image
+ IV. Deploy on target
+
+
+ I. Install dependencies
+===========================
+
+Clone the repositories
+```
+git clone -b dunfell git://git.yoctoproject.org/poky.git
+git clone -b dunfell git://git.yoctoproject.org/meta-raspberrypi.git
+git clone -b dunfell git://git.openembedded.org/meta-openembedded
+git clone -b dunfell https://github.com/96boards/meta-96boards.git
+git clone https://github.com/blkr35/meta-rasptank
+```
+
+Set up poky environment
+```
+source poky/oe-init-build-env
+```
+
+When loaded:
+```
+bitbake-layers add-layer ../meta-openembedded/meta-oe
+bitbake-layers add-layer ../meta-openembedded/meta-python
+bitbake-layers add-layer ../meta-openembedded/meta-multimedia
+bitbake-layers add-layer ../meta-openembedded/meta-networking
+bitbake-layers add-layer ../meta-raspberrypi
+```
+
+
+II. Adding the meta-adeept layer to your build
+=================================================
+
+```
+bitbake-layers add-layer ../meta-rasptank
+```
+
+III. Build
+=============
+
+```
+bitbake core-image-base
+```
+
+
+IV. Deploy on target
+=======================
+
+Insert microSD card mounted as /dev/sdb:
+```
+sudo bmaptool copy tmp-glibc/deploy/images/raspberrypi3-64/core-image-base-raspberrypi3-64.wic.bz2 /dev/sdb
+```
+
