@@ -2,17 +2,22 @@ SUMMARY = "RaspTank OS image"
 
 LICENSE = "MIT"
 
+COMPATIBLE_MACHINE = '(raspberrypi3-64)'
+
 inherit core-image
+
+# distro features
+DISTRO_FEATURES_append = " x11 fbdev directfb opengl"
+DISTRO_FEATURES_remove = " wayland vulkan"
 
 # add features
 EXTRA_IMAGE_FEATURES_append = " ssh-server-dropbear"
 EXTRA_IMAGE_FEATURES_append = " debug-tweaks"
 
 MACHINE_FEATURES_append = " vc4graphics"
-DISTRO_FEATURES_append = " x11 fbdev directfb opengl"
-DISTRO_FEATURES_remove = " wayland vulkan"
 
 # necessary software
+CORE_IMAGE_EXTRA_INSTALL_append = " psplash"
 CORE_IMAGE_EXTRA_INSTALL_append = " vim"
 CORE_IMAGE_EXTRA_INSTALL_append = " git"
 CORE_IMAGE_EXTRA_INSTALL_append = " python3 python3-dev python3-pip python3-smbus"
