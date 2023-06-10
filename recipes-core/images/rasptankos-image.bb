@@ -6,10 +6,6 @@ COMPATIBLE_MACHINE = '(raspberrypi3-64)'
 
 inherit core-image
 
-# distro features
-DISTRO_FEATURES_append = " x11 fbdev directfb opengl"
-DISTRO_FEATURES_remove = " wayland vulkan"
-
 # add features
 EXTRA_IMAGE_FEATURES_append = " ssh-server-dropbear"
 EXTRA_IMAGE_FEATURES_append = " debug-tweaks"
