@@ -108,7 +108,7 @@ The device will then reboot multiple times to download and install the remaining
 
 When the setup has completed, the device will display the following:
 ```
-RaspTankOS (Linux Distribution for Adeept RaspTank robot) 1.0.0 rasptank tty1
+RaspTankOS (Linux Distribution for Adeept RaspTank robot) 1.0 rasptank tty1
 
 IP address: <rasptankIP>
 
