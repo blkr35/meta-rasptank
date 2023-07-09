@@ -46,7 +46,7 @@ DISTRO =  "rasptankos"
 
 Finally, launch the build with:
 ```
-bitbake rasptankos-image
+bitbake rasptankos-rpi3-image
 ```
 
 ## For developers
@@ -61,7 +61,7 @@ MACHINE = "qemuarm64"
 
 Then, run:
 ```
-bitbake rasptankos-qemu
+bitbake rasptankos-qemu-image
 ```
 
 Run Qemu with:
@@ -79,7 +79,7 @@ ssh root@192.168.7.2
 
 Flash a microSD card for the Raspberry Pi (e.g. mounted as `/dev/sdb`):
 ```
-sudo bmaptool copy tmp-glibc/deploy/images/raspberrypi3-64/rasptankos-image-raspberrypi3-64.wic.bz2 /dev/sdb
+sudo bmaptool copy tmp-glibc/deploy/images/raspberrypi3-64/rasptankos-rpi3-image-raspberrypi3-64.wic.bz2 /dev/sdb
 ```
 
 ## On first boot
@@ -102,7 +102,8 @@ mySSID
 Enter password:
 ****
 ```
-The device will then reboot multiple times to download and install the remaining dependencies.
+
+The device will then reboot multiple times to configure the software. It will attempt to download and update the latest necessary packages but will continue the configuration even if no network is available.
 
 ## Connect
 

@@ -1,11 +1,11 @@
 SUMMARY = "RaspTank software"
-HOMEPAGE = "https://kickstartembedded.com"
+HOMEPAGE = "https://github.com/blkr35/Adeept_RaspTank"
 DESCRIPTION = "Example program for Adeept RaspTank"
 LICENSE = "MIT"
 SRC_URI = "git://github.com/blkr35/Adeept_RaspTank;protocol=https"
 SRC_URI[sha256sum] = "7bbf10f8d9eab92a77303143c98edf5a9e79347b4296d65dcec1194a1161adee"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=069556574df2364b5821d5c53ca4be02" 
-SRCREV = "14b43058d5167350ad4e40f620ea2a0c13054877"
+SRCREV = "f292b6a493cee621981ec060260e87901944be3f"
 
 
 python do_display_banner() {
