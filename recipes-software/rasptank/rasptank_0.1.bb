@@ -5,7 +5,7 @@ LICENSE = "MIT"
 SRC_URI = "git://github.com/blkr35/Adeept_RaspTank;protocol=https"
 SRC_URI[sha256sum] = "7bbf10f8d9eab92a77303143c98edf5a9e79347b4296d65dcec1194a1161adee"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=069556574df2364b5821d5c53ca4be02" 
-SRCREV = "f292b6a493cee621981ec060260e87901944be3f"
+SRCREV = "d28a260f964b982a8b78a3929928b4768f04d65f"
 
 
 python do_display_banner() {
