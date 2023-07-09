@@ -127,6 +127,6 @@ You can access the web interface at `http://<rasptankIP>:5000`
 
 ## Release notes
 
-| **RaspTank OS Version** | **Based on Yocto release* | **Comments** |
+| **RaspTank OS Version** | **Based on Yocto release** | **Comments** |
 |-- |-- |-- |
 | 1.0 | 3.1.25 "Dunfell" | Initial release |
